@@ -2,7 +2,8 @@
 #solenerotech.wordpress.com
 
 #solenerotech 2013.09.06
-# comment testing
+# nur fuers Testing 
+
 
 from motor import motor
 

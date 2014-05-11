@@ -14,7 +14,7 @@ Motorlist.append(mymotor1)
 
 mymotor2 = motor('m2', 27, simulation=False)
 Motorlist.append(mymotor2)
-#where 21 is  GPIO21 = pin 13
+#where 21 is  GPIO27 = pin 13
 
 mymotor3 = motor('m3', 22, simulation=False)
 Motorlist.append(mymotor3)
@@ -31,9 +31,9 @@ print('***Disconnect ESC power')
 print('***then press ENTER')
 
 res = input()
-for mymotor in Motorlist:
-	mymotor.start()
-	mymotor.setW(100)
+#for mymotor in Motorlist:
+#	mymotor.start()
+#	mymotor.setW(100)
 
 #NOTE:the angular motor speed W can vary from 0 (min) to 100 (max)
 #the scaling to pwm is done inside motor class

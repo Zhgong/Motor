@@ -33,7 +33,7 @@ class motor(object):
         self.setDebug(debug)
 
         self.__W = self.__WMin
-        self.__Wh = 10
+        self.__Wh = 10 # 10 us seconds
 
         try:
             from RPIO import PWM

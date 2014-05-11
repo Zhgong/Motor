@@ -2,6 +2,7 @@
 #solenerotech.wordpress.com
 
 #solenerotech 2013.09.06
+# comment testing
 
 from motor import motor
 

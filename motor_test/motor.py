@@ -1,20 +1,4 @@
-#solenero.tech@gmail.com
-#solenerotech.wordpress.com
-
-#2013.08.06 rpi test2
-#added User Interface
-#added Quadcopter.py
-
-#2013.08.09 new naming
-#RPM>W
-#RPMEquil>Wh (h=hover)
-#simulation > powered
-#mId > name
-
-#2013.09.06
-#powered >simulation
-#add powered = the PWM signal is out
-
+# this class to controll ESC motor via RPIO (PWM)
 
 class motor(object):
     """Manages the currect Angular rotation

@@ -1,9 +1,20 @@
-#solenero.tech@gmail.com
-#solenerotech.wordpress.com
+#
+#
 
-#solenerotech 2013.09.06
+#
 
 from motor import motor
+
+
+def Stopall():
+	'''Stop all the motors, with pulswidth 1000 us'''
+	for mymotor in Motorlist:
+		mymotor.setW(0)
+
+def PowerOffAll():
+	'''Power off all the motors'''
+	for mymotor in Motorlist:
+		mymotor.stop()
 
 Motorlist=[]   
 
@@ -49,7 +60,7 @@ print('***Wait N beep for battery cell')
 print('***Wait beeeeeep for ready')
 print('***then press ENTER')
 res = input()
-print ('increase > a | decrease > z | save Wh > n | set Wh > h|quit > 9')
+print ('increase > a | decrease > z | save Wh > n | set Wh > h | Stop all > s | quit > 9')
 
 cycling = True
 try:
@@ -67,12 +78,16 @@ try:
 		if res == 'h':
 			for mymotor in Motorlist:
 				mymotor.setWh()
+		if res == 's':
+			Stopall()
+
 		if res == '9':
-            		cycling = False
+			PowerOffAll()
+			cycling = False
 finally:
     	# shut down cleanly
-	for mymotor in Motorlist:
-		mymotor.stop()
+	#for mymotor in Motorlist:
+	#	mymotor.stop()
 	print ("well done!")
 
 

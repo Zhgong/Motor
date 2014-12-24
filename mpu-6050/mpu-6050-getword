@@ -1,0 +1,8 @@
+#! /bin/sh
+
+ADDR=`echo $1 | tr a-z A-Z`
+ADDR2=`echo "ibase=16; obase=10; $ADDR+1" | bc` # ADDR2=ADDR+1
+#echo $ADDR $ADDR2
+VARmsb=`./mpu-6050-getbyte $ADDR;`
+VARlsb=`./mpu-6050-getbyte $ADDR2;`
+echo $VARmsb$VARlsb

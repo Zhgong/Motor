@@ -1,0 +1,1 @@
+python C:\Python34\Scripts\cxfreeze IpSerialScan.py

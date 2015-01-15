@@ -1,3 +1,4 @@
+#!/bin/sh
 # 1. change date to the past
 # 2. run parallels
 # 3. change date back
@@ -31,7 +32,7 @@ sudo date $old_dty
 open /Applications/Parallels\ Desktop.app/
 
 # wait for 5 seconds
-sleep 5
+sleep 8
 
 # change it back
 echo "changing date back"

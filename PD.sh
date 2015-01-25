@@ -21,6 +21,18 @@ year=`date +"%y"`
 curr_dty=$month$day$hour$minute$year
 old_dty=$o_month$o_day$hour$minute$o_year
 
+
+changeback(){
+    # change it back
+    echo "changing date back"
+    sudo date $curr_dty
+
+    # synct date back
+    sudo ntpdate -u time.apple.com
+
+}
+
+
 echo "current date is:"
 date
 
@@ -34,9 +46,5 @@ open /Applications/Parallels\ Desktop.app/
 # wait for 5 seconds
 sleep 8
 
-# change it back
-echo "changing date back"
-sudo date $curr_dty
-
-# synct date back
-sudo ntpdate -u time.apple.com
+# chage date back
+changeback
